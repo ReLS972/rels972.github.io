@@ -15,7 +15,7 @@
 
   <mat-sidenav-container class="app-sub-container">
     <mat-sidenav #snav mode="over">
-      <p *ngFor="let item of routes">
+      <p *ngFor="let item of routing_menu">
         <button mat-raised-button [routerLink]="item.path" routerLinkActive="active">{{item.name}}</button>
       </p>
     </mat-sidenav>

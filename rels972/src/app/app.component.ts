@@ -14,8 +14,16 @@ export class AppComponent {
   ];
   current_theme_id = 0;
 
-  routes = [
-    { name: 'Home', path: '' },
-    { name: 'RSS-Intelligence', path: 'rss-i' },
-  ];
+  routing_menu = [];
+
+  constructor() {
+    const r = [ // add routing menu
+      { name: 'Home', path: '' },
+      { name: 'OMG YOU SEE ME', path: 'depend_on_routing_module_DEV_add_but_no_need_to_delete'}
+    ];
+
+    const paths = routes.map(_ => _.path);
+    r.filter(_ => paths.indexOf(_.path) >= 0).forEach(_ => this.routing_menu.push(_));
+
+  }
 }
